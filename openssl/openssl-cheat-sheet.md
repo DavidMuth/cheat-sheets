@@ -58,10 +58,10 @@ openssl pkcs12 -in cert.pfx -out cert.pem -nodes
 ### Windows
 -open Powershell as admin
 ```
-Import-Certificate -FilePath "`Path to ca.pem file`" -CertStoreLocation Cert:\LocalMachine\Root
+Import-Certificate -FilePath "Path to ca.pem file" -CertStoreLocation Cert:\LocalMachine\Root
 ```
 
 ### Issues with Firefox
 If the CA has been imported successfully, but Firefox still wont trust your Certificates do the following:
--in Firefox open `about:config`
--search for `security.enterprise_roots.enabled` and change the value to `true`.
+1. in Firefox open `about:config`
+2. search for `security.enterprise_roots.enabled` and change the value to `true`.
